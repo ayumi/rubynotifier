@@ -1,28 +1,11 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+cats and shit
 
-Things you may want to cover:
+== so u wanna develop
 
-* Ruby version
+* replace config/database.yml user settings with something more appropriate
 
-* System dependencies
+* create an .env file with your RACK_ENV and PORT preferences. (see: .env.default)
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* ```rake db:create```, ```bundle```, make sure you have [foreman](https://github.com/ddollar/foreman) installed and ```foreman start```
