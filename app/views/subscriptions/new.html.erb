@@ -1,2 +1,8 @@
-<h1>hi there</h1>
-<p>hi there</p>
+<h1>RubyNotifier</h1>
+<p>enter your email to be notified of ruby releases</p>
+<%= form_for(@subscription, url: subscriptions_path, method: :post) do |f| %>
+  <%= f.label :email %>
+  <%= f.text_field :email, autofocus: true %>
+
+  <%= f.submit "Subscribe" %>
+<% end %>

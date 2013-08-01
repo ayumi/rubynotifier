@@ -14,8 +14,11 @@
 ActiveRecord::Schema.define(version: 20130708042339) do
 
   create_table "subscriptions", force: true do |t|
-    t.string   "email",                        null: false
-    t.boolean  "is_subscribed", default: true, null: false
+    t.string   "email",                               null: false
+    t.string   "confirm_token",       default: "",    null: false
+    t.string   "cancel_token",        default: "",    null: false
+    t.boolean  "is_subscribed",       default: false, null: false
+    t.string   "last_version_string", default: "",    null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -8,6 +8,14 @@
 </head>
 <body>
 
+<% if flash.present? %>
+  <div id="flashes">
+    <% flash.each do |(key, notice)| %>
+      <div class="flash <%= key %>"><%= notice %></div>
+    <% end %>
+  </div>
+<% end %>
+
 <%= yield %>
 
 </body>

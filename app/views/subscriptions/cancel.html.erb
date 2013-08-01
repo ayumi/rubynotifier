@@ -1,0 +1,5 @@
+<h2>done!</h2>
+
+<p>Thanks! We will no longer send notifications to <b><%= @subscription.email %></b>.</p>
+
+<p>If you changed your mind, you can <%= link_to "resubscribe", confirm_subscription_url(@subscription) %>.</p>
