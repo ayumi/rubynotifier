@@ -27,13 +27,19 @@ GEM
       tzinfo (~> 0.3.37)
     arel (4.0.0)
     atomic (1.1.10)
+    autoscaler (0.4.1)
+      heroku-api
+      sidekiq (~> 2.7)
     builder (3.1.4)
     celluloid (0.13.0)
       timers (>= 1.0.0)
     connection_pool (1.0.0)
     erubis (2.7.0)
+    excon (0.20.1)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    heroku-api (0.3.9)
+      excon (~> 0.20.1)
     hike (1.2.3)
     i18n (0.6.4)
     mail (2.5.4)
@@ -104,6 +110,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  autoscaler
   nokogiri
   pg
   puma
