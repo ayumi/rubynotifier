@@ -9,4 +9,10 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Rubynotifier::Application.config.secret_key_base = '07e1da3bfc6af6bbb58700cf18869b534e530179e47effc7884814d7f3804c881ecdb55840cb9f211cf25f79d18c096f7c43add6542055690496c913c63c29f9'
+
+if Rails.env.test? || Rails.env.development? || Rails.env == "profile"
+  Rubynotifier::Application.config.secret_key_base = "07e1da3bfc6af6bbb58700cf18869b534e530179e47effc7884814d7f3804c881ecdb55840cb9f211cf25f79d18c096f7c43add6542055690496c913c63c29f9"
+else
+  raise "You must set a secret token in ENV['SECRET_TOKEN'] or in config/initializers/secret_token.rb" if ENV['SECRET_TOKEN'].blank?
+  Rubynotifier::Application.config.secret_key_base = ENV['SECRET_TOKEN']
+end
