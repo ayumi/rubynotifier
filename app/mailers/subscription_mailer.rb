@@ -5,7 +5,6 @@ class SubscriptionMailer < ActionMailer::Base
 
   def confirmation_email(subscription)
     @subscription = subscription
-    #@url = confirm_subscription_url(subscription)
     mail(:to => subscription.email, :subject => "Confirm your RubyNotifier.org subscription")
   end
 end
