@@ -9,10 +9,10 @@ task :notify_emails => :environment do
   end
 
   # Update new subscriptions to the latest version
-  Subscription.where(last_version_string: '').update_all(last_version_string: version)
+  Subscription.subscribed.where(last_version_string: '').update_all(last_version_string: version)
 
   # Notify people who need to be notified
-  Subscription.where.not(last_version_string: version).find_each do |sub|
+  Subscription.subscribed.where.not(last_version_string: version).find_each do |sub|
     sub.update_attribute(:last_version_string, version)
     Rails.logger.info "Notifying #{sub.email} of #{version}"
     NotificationMailer.delay.new_version_email(sub.email, version, version_url, sub.cancel_token)

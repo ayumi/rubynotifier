@@ -1,5 +1,6 @@
 class Subscription < ActiveRecord::Base
   validates :email, uniqueness: true, email: true
+  scope :subscribed, -> { where(is_subscribed: true) }
 
   def generate_confirmation!
     return false if is_subscribed?
