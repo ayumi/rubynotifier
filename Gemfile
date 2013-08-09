@@ -15,3 +15,7 @@ gem 'uglifier', '>= 1.3.0'
 # hands
 gem 'nokogiri', require: false
 gem 'autoscaler', require: false
+
+group :production do
+  gem 'rails_12factor'
+end
