@@ -1,6 +1,6 @@
-== hello!
+== hi!
 
-http://www.rubynotifier.org/
+visit the site: [RubyNotifier.org](http://www.rubynotifier.org/)
 
 This awesome web sight notifies people of new Ruby releases. It's designed to run on Heroku!
 
