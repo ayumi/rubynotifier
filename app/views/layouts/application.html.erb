@@ -6,7 +6,9 @@
   <%= javascript_include_tag "application" => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body data-controller="<%= params[:controller] %>" data-action="<%= params[:action] %>">
+
+<%= image_tag 'rubynotifier.png', :alt => "RubyNotifier Logo" %>
 
 <% if flash.present? %>
   <div id="flashes">
@@ -17,6 +19,10 @@
 <% end %>
 
 <%= yield %>
+
+<footer>
+  by <%= link_to "@colour", "https://twitter.com/colour" %> | <%= link_to "fork me on GitHub", "https://github.com/ayumi/rubynotifier" %>
+</footer>
 
 </body>
 </html>

@@ -1,8 +1,7 @@
-<h1>RubyNotifier</h1>
-<p>enter your email to be notified of ruby releases</p>
+<p>Latest Ruby: <%= link_to current_ruby_version, current_ruby_version_url %></p>
+<p class="main-hint">Enter your email to be notified of Ruby releases:</p>
 <%= form_for(@subscription, url: subscriptions_path, method: :post) do |f| %>
-  <%= f.label :email %>
-  <%= f.text_field :email, autofocus: true %>
+  <div class="field"><%= f.text_field :email, autofocus: true %></div>
 
-  <%= f.submit "Subscribe" %>
+  <div class="field"><%= f.submit "Subscribe" %></div>
 <% end %>
