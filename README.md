@@ -1,11 +1,11 @@
-== hi!
+## hello
 
-visit the site: [RubyNotifier.org](http://www.rubynotifier.org/)
+it's [RubyNotifier.org](http://www.rubynotifier.org/)!
 
 This awesome web sight notifies people of new Ruby releases. It's designed to run on Heroku!
 
 
-== dev environment
+## dev environment
 
 * clone the repo
 
@@ -18,7 +18,7 @@ This awesome web sight notifies people of new Ruby releases. It's designed to ru
 * ```mailcatcher``` is used for sending mail in dev
 
 
-== deploying
+## deploying
 
 Addons:
 
