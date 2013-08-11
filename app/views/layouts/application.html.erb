@@ -8,6 +8,8 @@
 </head>
 <body data-controller="<%= params[:controller] %>" data-action="<%= params[:action] %>">
 
+<a class="github-ribbon" href="https://github.com/ayumi/rubynotifier"><img src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+
 <%= image_tag 'rubynotifier.png', :alt => "RubyNotifier Logo" %>
 
 <% if flash.present? %>
@@ -21,7 +23,7 @@
 <%= yield %>
 
 <footer>
-  by <%= link_to "@colour", "https://twitter.com/colour" %> | <%= link_to "fork me on GitHub", "https://github.com/ayumi/rubynotifier" %>
+  follow me <%= link_to "@colour", "https://twitter.com/colour" %>
 </footer>
 
 </body>
