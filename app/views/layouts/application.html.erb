@@ -5,6 +5,7 @@
   <%= stylesheet_link_tag    "application", media: "all" %>
   <%= javascript_include_tag "application" => true %>
   <%= csrf_meta_tags %>
+  <%= ga_tracking_snippet %>
 </head>
 <body data-controller="<%= params[:controller] %>" data-action="<%= params[:action] %>">
 
@@ -25,8 +26,6 @@
 <footer>
   follow me <%= link_to "@colour", "https://twitter.com/colour" %>
 </footer>
-
-<%= ga_tracking_snippet %>
 
 </body>
 </html>
