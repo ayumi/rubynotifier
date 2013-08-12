@@ -45,3 +45,8 @@ heroku config:set SECRET_TOKEN=`openssl rand -base64 32`
 * ```heroku config:set HEROKU_API_KEY=your_api_key HEROKU_APP=your_app_name``` (for dyno autoscaler gem for sidekiq for async email)
 
 * google analytics: ```heroku config:set GA_TRACKING_ID=your_ga_id GA_DOMAIN=your_domain.org```
+
+
+## credits
+
+* the ruby gem logo was taken from Zohar Arad's 2012 presentation [Falling in love with Ruby](http://zohararad.github.io/presentations/falling-in-love-with-ruby/presentation)
